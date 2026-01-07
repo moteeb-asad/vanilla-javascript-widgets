@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ WIDGET</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="lx-faq-main-wrap custom-container">
+      <div class="header-wrap">
+        <div class="top-wrap">
+          <div class="view-btns-wrap">
+            <button
+              class="view-btn active"
+              data-btn-name="list"
+              data-btn-no="2"
+              data-state="active"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-list h-4 w-4"
+                aria-hidden="true"
+                data-pol-id="m9ctfn"
+                data-pol-file-name="club-organization-widget-with-subgroups"
+                data-pol-file-type="component"
+                data-pol-location-start="261:14"
+                data-pol-location-end="261:46"
+              >
+                <path d="M3 12h.01"></path>
+                <path d="M3 18h.01"></path>
+                <path d="M3 6h.01"></path>
+                <path d="M8 12h13"></path>
+                <path d="M8 18h13"></path>
+                <path d="M8 6h13"></path>
+              </svg>
+              <span>List</span>
+            </button>
+            <button
+              class="view-btn"
+              data-btn-name="cards"
+              data-btn-no="1"
+              data-state="inactive"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-layout-grid h-4 w-4"
+                aria-hidden="true"
+                data-pol-id="d7n36b"
+                data-pol-file-name="club-organization-widget-with-subgroups"
+                data-pol-file-type="component"
+                data-pol-location-start="243:14"
+                data-pol-location-end="243:52"
+              >
+                <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+                <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+                <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+              </svg>
+              <span>Cards</span>
+            </button>
+          </div>
+          <div class="filter-btn-wrap">
+            <button class="filter-dropdown-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-funnel h-4 w-4"
+                aria-hidden="true"
+                data-pol-id="89r2ro"
+                data-pol-file-name="club-organization-widget-with-subgroups"
+                data-pol-file-type="component"
+                data-pol-location-start="301:18"
+                data-pol-location-end="301:52"
+              >
+                <path
+                  d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+                ></path>
+              </svg>
+              Filter
+            </button>
+            <div class="filter-dropdown">
+              <div class="filter-dropdown-header">
+                <h3 class="main-label">Filters</h3>
+                <button class="clear-all">Clear all</button>
+              </div>
+              <div class="filter-separator"></div>
+              <div class="filter-categories-wrap">
+                <h4 class="filter-dropdown-subheading">Categories</h4>
+                <div class="filter-items">
+                  <div class="single-checkbox">
+                    <span class="checkbox-icon">
+                      <span data-state="unchecked">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4"
+                        >
+                          <path
+                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="checkbox-text">Bestuur</span>
+                  </div>
+                  <div class="single-checkbox">
+                    <span class="checkbox-icon">
+                      <span data-state="unchecked">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4"
+                        >
+                          <path
+                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="checkbox-text">Training & Ontwikkeling</span>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-separator"></div>
+              <div class="filter-attachments-wrap">
+                <h4 class="filter-dropdown-subheading">Attachments</h4>
+                <div class="filter-items">
+                  <div class="single-checkbox">
+                    <span class="checkbox-icon">
+                      <span data-state="unchecked">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4"
+                        >
+                          <path
+                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="checkbox-text"
+                      >Only items with attachments</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-wrap">
+          <!-- Search Wrap  -->
+          <div class="search-bar-outer-wrap">
+            <div class="search-wrap search-input-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="search-svg-color lucide lucide-search absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400 w-3.5 h-3.5"
+                aria-hidden="true"
+                data-pol-id="f5msu0"
+                data-pol-file-name="news-filters"
+                data-pol-file-type="component"
+                data-pol-location-start="54:8"
+                data-pol-location-end="54:113"
+              >
+                <path d="m21 21-4.34-4.34"></path>
+                <circle cx="11" cy="11" r="8"></circle>
+              </svg>
+              <input
+                type="text"
+                placeholder="Search by question..."
+                class="search-border-color search-input search-input-text-color"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-panel active" data-panel-name="list">
+        <div class="main-accordions-wrap">
+          <div class="accordion-item">
+            <button class="accordion-button">
+              <h2 class="accordion-title">
+                Competities & Evenementen<span>1</span>
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-5 w-5 transition-transform -rotate-90"
+                aria-hidden="true"
+                data-pol-id="7hk15m"
+                data-pol-file-name="faq-widget"
+                data-pol-file-type="component"
+                data-pol-location-start="453:20"
+                data-pol-location-end="460:22"
+                style="color: rgb(95, 95, 95)"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="accordion-content-panel">
+              <div class="inner-wrap">
+                <div class="single-question">
+                  <button class="faq-question-btn">
+                    <div class="question-inner-wrap">
+                      <div class="category-name">Competities & Evenementen</div>
+                      <h3 class="faq-question-title">
+                        Hoe worden teams geselecteerd voor wedstrijden?
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-download h-4 w-4 flex-shrink-0"
+                          aria-hidden="true"
+                          data-pol-id="m5fdbk"
+                          data-pol-file-name="faq-item"
+                          data-pol-file-type="component"
+                          data-pol-location-start="82:14"
+                          data-pol-location-end="87:16"
+                          style="color: hsl(var(--muted-foreground))"
+                        >
+                          <path
+                            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                          ></path>
+                          <polyline points="7 10 12 15 17 10"></polyline>
+                          <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                      </h3>
+                    </div>
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+                    >
+                      <path
+                        d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div class="accordion-content">
+                    <div class="top-content">
+                      Selectiebeslissingen worden genomen door teamtrainers in
+                      overleg met de Technisch Directeur van de club. Teams
+                      worden meestal 1-2 dagen voor wedstrijden aangekondigd via
+                      de club app en e-mail.
+                    </div>
+                    <div class="downloads-wrap">
+                      <h4 class="downloads-label">Downloads</h4>
+                      <div class="single-item">
+                        <a href="">
+                          <div class="icon-wrap">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-download h-5 w-5"
+                              aria-hidden="true"
+                              data-pol-id="yfstz5"
+                              data-pol-file-name="faq-item"
+                              data-pol-file-type="component"
+                              data-pol-location-start="143:20"
+                              data-pol-location-end="148:22"
+                              style="color: hsl(var(--primary))"
+                            >
+                              <path
+                                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                              ></path>
+                              <polyline points="7 10 12 15 17 10"></polyline>
+                              <line x1="12" x2="12" y1="15" y2="3"></line>
+                            </svg>
+                          </div>
+                          <div class="title-wrap">
+                            <h6 class="title">Wedstrijdschema</h6>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="bottom-content">
+                      <div class="created-at-wrap">
+                        <span>Created: </span>
+                        <span>28-02-2024</span>
+                      </div>
+                      <div class="separator">·</div>
+                      <div class="updated-at-wrap">
+                        <span>Updated: </span>
+                        <span>18-03-2024</span>
+                      </div>
+                      <div class="separator">·</div>
+                      <div class="author-wrap">
+                        <span>Author: </span>
+                        <span>Mark Jansen</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-panel" data-panel-name="cards">
+        <div class="main-accordions-wrap">
+          <div class="accordion-item">
+            <button class="accordion-button">
+              <h2 class="accordion-title">
+                Competities & Evenementen<span>1</span>
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-5 w-5 transition-transform -rotate-90"
+                aria-hidden="true"
+                data-pol-id="7hk15m"
+                data-pol-file-name="faq-widget"
+                data-pol-file-type="component"
+                data-pol-location-start="453:20"
+                data-pol-location-end="460:22"
+                style="color: rgb(95, 95, 95)"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="accordion-content-panel">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 grid-wrap"
+              >
+                <div class="single-item transition-shadow shadow-sm">
+                  <div class="category-name">Competities Evenementen</div>
+                  <h3 class="faq-question-title">
+                    Hoe worden teams geselecteerd voor wedstrijden?
+                  </h3>
+                  <div class="faq-desc-wrap">
+                    Teamselectie is gebaseerd op verschillende Teamselectie is
+                    gebaseerd op verschillende...
+                  </div>
+                  <button class="read-more-btn">
+                    Lees meer
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-down h-3 w-3"
+                      aria-hidden="true"
+                      data-pol-id="65rkan"
+                      data-pol-file-name="faq-widget"
+                      data-pol-file-type="component"
+                      data-pol-location-start="609:28"
+                      data-pol-location-end="609:67"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="no-result-match-wrap">
+        <div class="no-result-match-text">Geen resultaten gevonden.</div>
+      </div>
+    </div>
+    <!-- Card View FAQ Modal -->
+    <div class="card-view-modal-container">
+      <div class="bg-overlay"></div>
+      <div class="card-view-faq-modal">
+        <div class="header-wrap">
+          <div class="cvf-category-name">Faciliteiten & Uitrusting</div>
+          <h3 class="cvf--question-title">
+            Hoe worden teams geselecteerd voor wedstrijden?
+          </h3>
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+          >
+            <path
+              d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <div class="content-wrap">
+          <div class="cvf-desc-wrap">
+            Teamselectie is gebaseerd op verschillende Teamselectie is gebaseerd
+            op verschillende. Had je je alleen aangemeld voor het zaalhockey dan
+            eindigt het lidmaatschap op 1 maart, deed je aan veldhockey dan
+            eindigt het lidmaatschap op 30 juni.
+          </div>
+          <div class="footer-content">
+            <div class="created-at-wrap">
+              <span>Created: </span>
+              <span>28-02-2024</span>
+            </div>
+            <div class="separator">·</div>
+            <div class="updated-at-wrap">
+              <span>Updated: </span>
+              <span>18-03-2024</span>
+            </div>
+            <div class="separator">·</div>
+            <div class="author-wrap">
+              <span>Author: </span>
+              <span>Mark Jansen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
