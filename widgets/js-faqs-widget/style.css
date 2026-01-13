@@ -929,6 +929,8 @@
 
 .lx-faq-main-wrap.dark-mode {
   background-color: #18181b;
+  color: #e4e4e7;
+  padding: 2rem 1rem;
 }
 
 .lx-faq-main-wrap.dark-mode .header-wrap {
@@ -939,8 +941,300 @@
   background-color: #18181b;
 }
 
+/* View Buttons */
 .lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btns-wrap {
+  background-color: #27272a;
+  border-color: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn-divider {
+  background: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn:not(:last-child) {
+  border-right-color: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn[data-state="active"] {
+  background: #3f3f46;
+  color: #e4e4e7;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn:hover:not([data-state="active"]) {
+  background-color: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn svg {
+  color: inherit;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .view-btn span {
+  color: inherit;
+}
+
+/* Filter Dropdown Button */
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-dropdown-btn {
+  background: #27272a;
+  border-color: #3f3f46;
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-dropdown-btn.active {
+  background-color: #fff;
+  color: #18181b !important;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-dropdown-btn svg {
+  color: inherit;
+}
+
+/* Filter Dropdown */
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-dropdown {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-dropdown-header .main-label {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-separator {
+  background: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .filter-dropdown-subheading {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .clear-all {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .clear-all:hover {
+  color: #e4e4e7;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .single-checkbox .checkbox-icon {
+  border-color: #3f3f46;
+  background-color: #27272a;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .single-checkbox .checkbox-text {
+  color: #e4e4e7;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .single-checkbox span[data-state="checked"] {
+  background: #fff;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .single-checkbox span[data-state="checked"] svg {
+  color: #18181b !important;
+}
+
+/* Selected Filters */
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .selected-filters-wrap .selected-filter-btn {
+  background-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .top-wrap .selected-filters-wrap .selected-filter-btn svg {
+  color: #e4e4e7;
+}
+
+/* Search Bar */
+.lx-faq-main-wrap.dark-mode .header-wrap .search-bar-outer-wrap .search-wrap svg {
+  color: #71717a;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .search-bar-outer-wrap .search-wrap input {
+  background-color: #27272a !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .search-bar-outer-wrap .search-wrap input::placeholder {
+  color: #71717a;
+}
+
+.lx-faq-main-wrap.dark-mode .header-wrap .search-bar-outer-wrap .search-wrap input:focus {
+  outline-color: #3f3f46;
+  border-color: #52525b !important;
+}
+
+/* Accordion Button */
+.lx-faq-main-wrap.dark-mode .main-accordions-wrap .accordion-item .accordion-button {
+  background-color: #27272a;
+  border-color: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .main-accordions-wrap .accordion-item .accordion-button .accordion-title {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .main-accordions-wrap .accordion-item .accordion-button .accordion-title span {
+  background-color: #3f3f46 !important;
+  color: #a1a1aa !important;
+}
+
+.lx-faq-main-wrap.dark-mode .main-accordions-wrap .accordion-item .accordion-button svg {
+  color: #a1a1aa;
+}
+
+/* List Panel */
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel {
+  border-color: #3f3f46;
+  background-color: #27272a;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .single-question {
+  border-color: #3f3f46;
   background-color: #18181b;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .faq-question-btn .category-name {
+  background-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .faq-question-btn .faq-question-title {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .faq-question-btn .faq-question-title svg {
+  color: #a1a1aa !important;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .top-content {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .top-content a {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .downloads-wrap .downloads-label {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .downloads-wrap .single-item {
+  background-color: #27272a;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .downloads-wrap .single-item .icon-wrap {
+  background-color: #3f3f46;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .downloads-wrap .single-item .icon-wrap svg {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .downloads-wrap .single-item .title-wrap .title {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .images-wrap .images-label {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .images-wrap .images-grid .image-item .image-caption {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .list-panel .main-accordions-wrap .accordion-item .accordion-content-panel .inner-wrap .accordion-content .bottom-content {
+  border-top-color: #3f3f46;
+  color: #71717a;
+}
+
+/* Cards Panel */
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item {
+  border-color: #3f3f46;
+  background-color: #27272a;
+}
+
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item:hover {
+  border-color: #52525b;
+}
+
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item .category-name {
+  background-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item .faq-question-title {
+  color: #e4e4e7 !important;
+}
+
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item .faq-desc-wrap {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item .read-more-btn {
+  color: #a1a1aa;
+}
+
+.lx-faq-main-wrap.dark-mode .card-panel .main-accordions-wrap .accordion-item .accordion-content-panel .grid-wrap .single-item .read-more-btn svg {
+  color: #a1a1aa;
+}
+
+/* Modal */
+.card-view-modal-container.dark-mode .card-view-faq-modal {
+  background-color: #27272a;
+  border-color: #3f3f46;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .cvf-category-name {
+  background-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .cvf--question-title {
+  color: #e4e4e7 !important;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .cvf-desc-wrap {
+  color: #a1a1aa;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .cvf-desc-wrap a {
+  color: #a1a1aa;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .footer-content {
+  border-top-color: #3f3f46;
+  color: #71717a;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .downloads-label {
+  color: #e4e4e7 !important;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .downloads-wrap .single-item {
+  background-color: #18181b;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .downloads-wrap .single-item .icon-wrap {
+  background-color: #3f3f46;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .downloads-wrap .single-item .icon-wrap svg {
+  color: #e4e4e7 !important;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .content-wrap .downloads-wrap .single-item .title-wrap .title {
+  color: #e4e4e7 !important;
+}
+
+.card-view-modal-container.dark-mode .card-view-faq-modal .header-wrap svg {
+  color: #e4e4e7;
+}
+
+/* No Results */
+.lx-faq-main-wrap.dark-mode .no-result-match-wrap .no-result-match-text {
+  color: #71717a;
 }
 
 /* ------MEDIA QUERIES ------ */

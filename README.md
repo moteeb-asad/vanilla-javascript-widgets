@@ -1,23 +1,22 @@
-# Duda JavaScript Widgets
+# Vanilla JavaScript Widgets
 
-A collection of custom JavaScript widgets built with **vanilla JavaScript** (no frameworks). These widgets demonstrate modern JavaScript practices, DOM manipulation, event handling, and component architecture.
+A collection of reusable JavaScript widgets built with **vanilla JavaScript** (no frameworks). These widgets can be integrated into any frontend website to display dynamic data by connecting to APIs or data files.
 
-## 🎯 Purpose
+## 🎯 Overview
 
-This repository showcases vanilla JavaScript development skills, including:
+This repository contains self-contained, production-ready JavaScript widgets that:
 
-- ES6+ features (modules, arrow functions, destructuring)
-- DOM manipulation and dynamic content generation
-- Event handling and state management
-- Component-based architecture
-- Responsive design implementation
-- Code organization and maintainability
+- **Work on any frontend**: Easily integrate into any website or web application
+- **Connect to data sources**: Fetch data from REST APIs or use local data files
+- **Pure JavaScript**: Built with vanilla JavaScript (ES6+) - no dependencies required
+- **Responsive & Accessible**: Mobile-friendly designs with dark mode support
+- **Easy to customize**: Well-structured code that's simple to modify and extend
 
 ## 📦 Widgets
 
 ### FAQ Widget (`js-faqs-widget`)
 
-An interactive FAQ widget with advanced features:
+An interactive FAQ widget with dual view modes, search, filtering, and modal popups.
 
 **Features:**
 
@@ -28,24 +27,36 @@ An interactive FAQ widget with advanced features:
 - Modal popups for detailed views
 - Responsive design
 - Dark mode support
-- Configurable display options
 
-**Technical Highlights:**
-
-- **1,149 lines** of well-organized vanilla JavaScript
-- Dynamic DOM element creation
-- Event delegation and state management
-- SVG icon generation
-- HTML content parsing and sanitization
-- Date formatting utilities
-- Modular function structure
+**Data Source:** Connects to API or uses `dummyData.js` file
 
 **Files:**
 
-- `main.js` - Core functionality (1,149 lines)
+- `main.js` - Core functionality (1,157 lines)
 - `index.html` - HTML structure
-- `style.css` - Responsive styling (1,186 lines)
+- `style.css` - Responsive styling (1,254 lines)
 - `dummyData.js` - Sample data structure
+
+### Cancelled Matches Carousel Widget (`js-cancelled-matches-carousel-widget`)
+
+A carousel widget for displaying cancelled sports matches with date filtering.
+
+**Features:**
+
+- Smooth carousel navigation
+- Date-based filtering
+- Match details display (teams, times, locations, reasons)
+- Responsive design
+- Dark mode support
+
+**Data Source:** Connects to API or uses `dummyData.js` file
+
+**Files:**
+
+- `main.js` - Core functionality (1,159 lines)
+- `index.html` - HTML structure
+- `style.css` - Styling with dark mode (471 lines)
+- `dummyData.js` - Configuration and sample data
 
 ## 🛠️ Technologies Used
 
@@ -57,45 +68,72 @@ An interactive FAQ widget with advanced features:
 ## 📁 Project Structure
 
 ```
-duda-javascript-widgets/
+vanilla-javascript-widgets/
 ├── widgets/
 │   ├── js-faqs-widget/
 │   │   ├── index.html
 │   │   ├── main.js
 │   │   ├── style.css
 │   │   ├── dummyData.js
+│   │   ├── screenshots/
 │   │   └── README.md
-│   └── [other widgets...]
+│   ├── js-cancelled-matches-carousel-widget/
+│   │   ├── index.html
+│   │   ├── main.js
+│   │   ├── style.css
+│   │   ├── dummyData.js
+│   │   ├── screenshots/
+│   │   └── README.md
+│   └── [more widgets...]
 └── README.md
 ```
 
 ## 🚀 Getting Started
 
-Each widget is self-contained and can be run independently:
+Each widget is self-contained and can be integrated into any website:
 
-1. Navigate to a widget folder
-2. Open `index.html` in a browser
-3. Or use a local server:
+1. **Copy the widget files** to your project
+2. **Configure data source**: Update `dummyData.js` with your API endpoint or data
+3. **Include in your HTML**: Add the CSS and JavaScript files to your page
+4. **Customize**: Modify styles and configuration as needed
 
-   ```bash
-   # Using Python
-   python -m http.server 8000
+### Running Locally
 
-   # Using Node.js
-   npx serve
-   ```
+For testing, you can run each widget independently:
 
-## 💡 Key JavaScript Concepts Demonstrated
+```bash
+# Navigate to widget folder
+cd widgets/js-faqs-widget
 
-- **ES6 Modules**: Import/export functionality
-- **DOM API**: QuerySelector, createElement, appendChild
-- **Event Handling**: addEventListener, event delegation
-- **State Management**: Global state objects
-- **Array Methods**: map, filter, forEach, reduce
-- **Template Literals**: Dynamic string generation
-- **Arrow Functions**: Modern function syntax
-- **Destructuring**: Object and array destructuring
-- **Optional Chaining**: Safe property access (`?.`)
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve
+```
+
+## 💡 Data Integration
+
+Widgets can connect to data in two ways:
+
+1. **API Integration**: Configure the API endpoint and authentication token in `dummyData.js`
+2. **Local Data File**: Use the `dummyData.js` file to provide static data
+
+Example API configuration:
+
+```javascript
+config: {
+  api_url: "https://api.example.com/data",
+  api_token: "your-api-token"
+}
+```
+
+## 🛠️ Technologies Used
+
+- **Vanilla JavaScript** (ES6+ modules)
+- **HTML5**
+- **CSS3** (Grid, Flexbox, Custom Properties)
+- **No frameworks or libraries** - pure JavaScript
 
 ## 📝 Code Quality
 
@@ -108,3 +146,15 @@ Each widget is self-contained and can be run independently:
 ## 📄 License
 
 This project is for portfolio/educational purposes.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues) if you want to contribute.
+
+## 📧 Contact
+
+For questions or suggestions, please open an issue or contact the repository maintainer.
+
+## ⭐ Show Your Support
+
+If you find this project helpful, please consider giving it a star ⭐!

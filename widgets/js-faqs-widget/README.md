@@ -2,6 +2,14 @@
 
 A comprehensive, interactive FAQ (Frequently Asked Questions) widget built with vanilla JavaScript. This widget provides an elegant way to display and manage FAQs with multiple viewing options, filtering capabilities, and customizable display settings.
 
+## Screenshots
+
+### Light Mode
+![Light Mode](screenshots/faqs-widget.png)
+
+### Dark Mode
+![Dark Mode](screenshots/faqs-widget-dark-mode.png)
+
 ## Overview
 
 The FAQ Widget is designed to help users easily find answers to common questions. It features:
@@ -52,9 +60,12 @@ The FAQ Widget is designed to help users easily find answers to common questions
 ```
 js-faqs-widget/
 ├── index.html          # Main HTML structure and layout
-├── main.js            # JavaScript logic and functionality (1149 lines)
-├── style.css          # CSS styling and responsive design (1186 lines)
+├── main.js            # JavaScript logic and functionality (1157 lines)
+├── style.css          # CSS styling and responsive design (1254 lines)
 ├── dummyData.js       # Sample data structure and configuration
+├── screenshots/        # Widget screenshots (light and dark mode)
+│   ├── faqs-widget.png
+│   └── faqs-widget-dark-mode.png
 └── README.md          # This documentation file
 ```
 
@@ -75,7 +86,7 @@ The main HTML file containing:
 
 #### `main.js`
 
-The core JavaScript file (1149 lines) containing:
+The core JavaScript file (1157 lines) containing:
 
 - **Data Management**: FAQ data processing and grouping
 - **View Toggle**: Switching between List and Cards views
@@ -83,12 +94,12 @@ The core JavaScript file (1149 lines) containing:
 - **Search Functionality**: Real-time search implementation
 - **Rendering Functions**: Dynamic HTML generation for both views
 - **Modal Management**: Card view modal open/close functionality
-- **Configuration Handling**: Duda Content Editor options
+- **Configuration Handling**: Widget configuration options
 - **Helper Functions**: Date formatting, SVG creation, etc.
 
 #### `style.css`
 
-Comprehensive styling file (1186 lines) including:
+Comprehensive styling file (1254 lines) including:
 
 - CSS custom properties (variables)
 - Grid system for responsive layouts
@@ -195,4 +206,4 @@ The widget expects data in the following format:
 - The widget uses ES6 modules (`type="module"`)
 - SVG icons are generated dynamically via JavaScript
 - All styling is scoped to `.lx-faq-main-wrap` to prevent conflicts
-- The widget is designed to work within the Duda platform but can be used standalone
+- Pure vanilla JavaScript implementation - no frameworks or external dependencies required

@@ -14,10 +14,10 @@ A responsive carousel widget that displays cancelled hockey matches with support
 ## Screenshots
 
 ### Light Mode
-![Light Mode](cancel-matches-carousel.png)
+![Light Mode](screenshots/cancel-matches-carousel.png)
 
 ### Dark Mode
-![Dark Mode](cancel-matches-carousel-dark.png)
+![Dark Mode](screenshots/cancel-matches-carousel-dark.png)
 
 ## Configuration
 
@@ -39,6 +39,7 @@ config: {
 - `main.js` - Core functionality (1,159 lines)
 - `style.css` - Styling with dark mode support (471 lines)
 - `dummyData.js` - Configuration and sample data
+- `screenshots/` - Widget screenshots (light and dark mode)
 
 ## Usage
 

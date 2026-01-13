@@ -153,7 +153,7 @@ export const data = {
         title: "Where can I find the map?",
       },
     ],
-    dark_mode: true,
+    dark_mode: false,
     default_desktop_view: "cards",
     default_mobile_view: "list",
     hide_search_bar: false,

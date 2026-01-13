@@ -912,6 +912,14 @@ function handleDudaContentEditorOptions() {
     ? faqMainWrap.classList.add("dark-mode")
     : faqMainWrap.classList.remove("dark-mode");
 
+  // add dark-mode class on modal container if dark_mode is true
+  const modalContainer = document.querySelector(".card-view-modal-container");
+  if (modalContainer) {
+    dark_mode
+      ? modalContainer.classList.add("dark-mode")
+      : modalContainer.classList.remove("dark-mode");
+  }
+
   // hide search-bar-outer-wrap if hide_search_bar is true
   const searchBarOuterWrap = document.querySelector(".search-bar-outer-wrap");
   hide_search_bar
