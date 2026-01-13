@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancelled Matches Carousel 2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="cancelled-matches-carousel-loader" style="display: flex">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading...</div>
+    </div>
+    <div class="cancelled-matches-carousel">
+      <div class="main-widget-title main-widget-title-text">Cancellations</div>
+      <div class="carousel-info-wrap">
+        <div class="total-carousel-matches inner-info">
+          1 cancellation today
+        </div>
+        <span class="middle-dot">·</span>
+        <div class="total-cancelled-matches inner-info">
+          0 cancellations later this week
+        </div>
+      </div>
+      <div class="cancellation-for-wrap">
+        <span class="cancellation-for-label cancellation-for-text"
+          >Cancellations for:</span
+        >
+        <span class="cancellation-for-date cancellation-for-text"
+          >Saturday 20 December 2025</span
+        >
+      </div>
+      <div class="carousel-container">
+        <div
+          class="matches-carousel duration-500 ease-in-out transition-transform"
+        >
+          <div class="single-match">
+            <div class="inner-wrap">
+              <div class="top-wrap">
+                <div class="home-team-wrap team-wrap">
+                  <img
+                    src="https://github.com/polymet-ai.png"
+                    alt="Home Team"
+                  />
+                  <div class="team-name-wrap">
+                    <div class="home-team-name main-name">Almeerse Boys</div>
+                    <div class="home-team-label main-label">Onder 12</div>
+                  </div>
+                </div>
+                <div class="vs-wrap">vs</div>
+                <div class="away-team-wrap team-wrap">
+                  <img
+                    src="https://github.com/polymet-ai.png"
+                    alt="Home Team"
+                  />
+                  <div class="team-name-wrap">
+                    <div class="away-team-name main-name">Almeerse Boys</div>
+                    <div class="away-team-label main-label">Onder 13</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-wrap">
+                <div class="bottom-inner-wrap">
+                  <span class="match-date">02 Jan</span>
+                  <span class="dot">·</span>
+                  <span class="match-time-date">14:30</span>
+                  <span class="dot">·</span>
+                  <span class="match-field">Veld 1</span>
+                  <span class="dot">·</span>
+                </div>
+                <span class="match-cancelled-reason">Field unavailable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots-wrap">
+          <div class="carousel-dot active"></div>
+          <div class="carousel-dot"></div>
+        </div>
+        <div class="carousel-buttons-wrap">
+          <button class="carousel-button prev">
+            <svg
+              data-auto="arrow"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.46967 3.46967C5.76256 3.17678 6.23744 3.17678 6.53033 3.46967L10.5303 7.46967C10.8232 7.76256 10.8232 8.23744 10.5303 8.53033L6.53033 12.5303C6.23744 12.8232 5.76256 12.8232 5.46967 12.5303C5.17678 12.2374 5.17678 11.7626 5.46967 11.4697L8.93934 8L5.46967 4.53033C5.17678 4.23744 5.17678 3.76256 5.46967 3.46967Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+          <button class="carousel-button next">
+            <svg
+              data-auto="arrow"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.46967 3.46967C5.76256 3.17678 6.23744 3.17678 6.53033 3.46967L10.5303 7.46967C10.8232 7.76256 10.8232 8.23744 10.5303 8.53033L6.53033 12.5303C6.23744 12.8232 5.76256 12.8232 5.46967 12.5303C5.17678 12.2374 5.17678 11.7626 5.46967 11.4697L8.93934 8L5.46967 4.53033C5.17678 4.23744 5.17678 3.76256 5.46967 3.46967Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="view-all-wrap">
+        <a href="#" class="view-all-link view-all-text"
+          >View all cancellations →</a
+        >
+      </div>
+      <!-- DUDA EDITOR MESSAGE WRAP  -->
+      <div class="duda-editor-message-wrap">
+        <div class="svg-wrap">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-muted-foreground"
+            data-pol-id="2d22ka"
+            data-pol-file-name="homepage-afgelastingen-demo"
+            data-pol-file-type="page"
+            data-pol-location-start="69:14"
+            data-pol-location-end="85:20"
+          >
+            <path
+              d="M9.88 9.88a3 3 0 1 0 4.24 4.24"
+              data-pol-id="7xrdzz"
+              data-pol-file-name="homepage-afgelastingen-demo"
+              data-pol-file-type="page"
+              data-pol-location-start="81:16"
+              data-pol-location-end="81:59"
+            ></path>
+            <path
+              d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"
+              data-pol-id="28thd6"
+              data-pol-file-name="homepage-afgelastingen-demo"
+              data-pol-file-type="page"
+              data-pol-location-start="82:16"
+              data-pol-location-end="82:105"
+            ></path>
+            <path
+              d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"
+              data-pol-id="z0epc4"
+              data-pol-file-name="homepage-afgelastingen-demo"
+              data-pol-file-type="page"
+              data-pol-location-start="83:16"
+              data-pol-location-end="83:99"
+            ></path>
+            <line
+              x1="2"
+              x2="22"
+              y1="2"
+              y2="22"
+              data-pol-id="kwwm0s"
+              data-pol-file-name="homepage-afgelastingen-demo"
+              data-pol-file-type="page"
+              data-pol-location-start="84:16"
+              data-pol-location-end="84:54"
+            ></line>
+          </svg>
+        </div>
+        <div class="main-title">Widget hidden (no cancellations)</div>
+        <div class="main-subtitle">
+          On the live website, this widget is completely hidden when there are
+          no cancellations (today or future). This placeholder is only visible
+          in the Duda editor.
+        </div>
+      </div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

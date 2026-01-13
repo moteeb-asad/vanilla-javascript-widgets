@@ -1,0 +1,471 @@
+:root {
+    --font-family: "Inter", sans-serif;
+}
+
+/* ------- MAIN WIDGET TITLE ------- */
+
+.cancelled-matches-carousel .main-widget-title {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* ------- CAROUSEL INFO WRAP ------- */
+
+.cancelled-matches-carousel .carousel-info-wrap {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+    gap: 0.5rem;
+}
+
+.cancelled-matches-carousel .carousel-info-wrap .inner-info {
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #dc2626;
+}
+
+.cancelled-matches-carousel .carousel-info-wrap .middle-dot {
+    margin: 0 0.5rem;
+}
+
+.cancelled-matches-carousel .carousel-info-wrap .total-carousel-matches {
+    font-weight: 700;
+}
+
+/* ------- CANCELLATION FOR WRAP ------- */
+
+.cancelled-matches-carousel .cancellation-for-wrap {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.cancelled-matches-carousel .cancellation-for-wrap .cancellation-for-label {
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+
+.cancelled-matches-carousel .cancellation-for-wrap .cancellation-for-date {
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+/* ------- SINGLE MATCH ------- */
+
+.cancelled-matches-carousel .carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.cancelled-matches-carousel .matches-carousel {
+    display: grid;
+    grid-auto-columns: 33.33%;
+    grid-auto-flow: column;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.cancelled-matches-carousel .matches-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match {
+    border: 1px solid #e5e5e5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0 8px;
+    background: #ffffffe6;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match:hover {
+    border-color: #d1d1d1;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .top-wrap .vs-wrap {
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #8c8c8c;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .top-wrap .team-wrap {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1 1 0%;
+    align-items: center;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .bottom-wrap {
+    padding-top: 0.75rem;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .bottom-wrap span {
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #09090b;
+    text-transform: capitalize;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .bottom-wrap .match-cancelled-reason {
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #5f5f5f;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .bottom-wrap .dot {
+    margin: 0 5px;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 9999px;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .main-name {
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    font-weight: 500 !important;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.cancelled-matches-carousel .matches-carousel .single-match .main-label {
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: #09090b;
+    text-align: left;
+}
+
+.cancelled-matches-carousel .carousel-dots-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.cancelled-matches-carousel .carousel-dots-wrap .carousel-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #d1d1d1;
+    border: 0px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cancelled-matches-carousel .carousel-dots-wrap .carousel-dot:hover {
+    background: #a1a1a1;
+}
+
+.cancelled-matches-carousel .carousel-dots-wrap .carousel-dot.active {
+    background: #333;
+}
+
+.cancelled-matches-carousel .carousel-dots-wrap .carousel-dot.active:hover {
+    background: #333;
+}
+
+.cancelled-matches-carousel .carousel-buttons-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.cancelled-matches-carousel .carousel-buttons-wrap .carousel-button {
+    pointer-events: all;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cancelled-matches-carousel .carousel-buttons-wrap .carousel-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cancelled-matches-carousel .carousel-buttons-wrap .carousel-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.cancelled-matches-carousel .carousel-buttons-wrap .carousel-button.prev svg {
+    transform: scaleX(-1);
+}
+
+/* ------- VIEW ALL WRAP ------- */
+
+.cancelled-matches-carousel .view-all-wrap {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.cancelled-matches-carousel .view-all-wrap .view-all-link {
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #5f5f5f;
+    text-decoration: none;
+}
+
+.cancelled-matches-carousel .view-all-wrap .view-all-link:hover {
+    text-decoration: underline;
+}
+
+/* ------- DUDA EDITOR MESSAGE WRAP ------- */
+
+.cancelled-matches-carousel .duda-editor-message-wrap {
+    display: none;
+}
+
+.cancelled-matches-carousel .editorBody.duda-editor-message-wrap {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.cancelled-matches-carousel .duda-editor-message-wrap .svg-wrap {
+    background: #f4f4f5;
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancelled-matches-carousel .duda-editor-message-wrap svg {
+    margin: auto;
+    color: #71717a;
+}
+
+.cancelled-matches-carousel .duda-editor-message-wrap .main-title {
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #09090b;
+}
+
+.cancelled-matches-carousel .duda-editor-message-wrap .main-subtitle {
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: #71717a;
+    max-width: 28rem;
+    margin: auto;
+}
+
+/* ------------- CANCELLED MATCHES CAROUSEL LOADER -------------  */
+
+.cancelled-matches-carousel-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    flex-direction: column;
+}
+
+.cancelled-matches-carousel-loader .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #212529;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.cancelled-matches-carousel-loader .loader-text {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #666;
+    font-family: var(--font-family);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------- DARK MODE -------------  */
+
+.cancelled-matches-carousel.dark-mode {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+}
+
+.cancelled-matches-carousel.dark-mode .main-widget-title {
+    color: #fff;
+}
+
+.cancelled-matches-carousel.dark-mode .carousel-info-wrap .inner-info {
+    color: #f87171;
+}
+
+.cancelled-matches-carousel.dark-mode .cancellation-for-wrap {
+    color: #fff;
+}
+
+.cancelled-matches-carousel.dark-mode .matches-carousel .single-match {
+    background-color: #2a2a2a;
+    border-color: #3a3a3a;
+}
+
+.cancelled-matches-carousel.dark-mode .matches-carousel .single-match .bottom-wrap {
+    border-color: #3a3a3a;
+}
+
+.cancelled-matches-carousel.dark-mode .matches-carousel .single-match .bottom-wrap span {
+    color: #a0a0a0;
+}
+
+.cancelled-matches-carousel.dark-mode .matches-carousel .single-match .main-name {
+    color: #e5e5e5;
+}
+
+.cancelled-matches-carousel.dark-mode .matches-carousel .single-match .main-label {
+    color: #a0a0a0;
+}
+
+.cancelled-matches-carousel.dark-mode .view-all-wrap .view-all-link {
+    color: #a0a0a0;
+}
+
+.cancelled-matches-carousel.dark-mode .view-all-wrap .view-all-link:hover {
+    color: #fff;
+}
+
+.cancelled-matches-carousel.dark-mode .carousel-buttons-wrap .carousel-button,
+.cancelled-matches-carousel.dark-mode .carousel-buttons-wrap .carousel-button:hover:not(:disabled) {
+    background: #2a2a2a;
+    border-color: #3a3a3a;
+    color: #fff;
+}
+
+/* ------------- CARROUSEL ANIMATION -------------  */
+
+.cancelled-matches-carousel .ease-in-out {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cancelled-matches-carousel .duration-500 {
+    animation-duration: 500ms;
+}
+
+.cancelled-matches-carousel .transition-transform {
+    transition-property: transform;
+}
+
+/* ------- MEDIA QUERIES ------- */
+
+@media (max-width: 1023px) {
+    .cancelled-matches-carousel .matches-carousel {
+        grid-auto-columns: 50%;
+    }
+}
+
+@media (max-width: 639px) {
+    .cancelled-matches-carousel .carousel-info-wrap {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .cancelled-matches-carousel .carousel-info-wrap .middle-dot {
+        display: none;
+    }
+
+    .cancelled-matches-carousel .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .cancelled-matches-carousel .matches-carousel {
+        grid-auto-columns: 100%;
+        justify-content: initial;
+    }
+
+    .cancelled-matches-carousel .matches-carousel .single-match {
+        margin: 0 0;
+    }
+
+    .cancelled-matches-carousel .carousel-buttons-wrap {
+        display: none;
+    }
+}
+
+@media (max-width: 330px) {
+
+    .cancelled-matches-carousel .cancellation-for-wrap .cancellation-for-label,
+    .cancelled-matches-carousel .cancellation-for-wrap .cancellation-for-date {
+        display: block;
+    }
+}
