@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sponsors Widget</title>
+    <link rel="stylesheet" href="/widgets/js-sponsors-widget/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sponsors Loader -->
+    <div class="lx-sponsors-loader">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading...</div>
+    </div>
+    <!-- Sponsors Wrap -->
+    <div class="lx-sponsors-wrap custom-container">
+      <div class="sponsors-alert-message">
+        Please connect collection to see sponsors
+      </div>
+      <!-- Filters Dropdown + View Tabs + Search  -->
+      <div class="main-header-wrap">
+        <div class="top-wrap">
+          <div class="view-buttons-wrap">
+            <button class="view-tiles-btn active" data-button-name="tiles">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-layout-grid h-4 w-4"
+                aria-hidden="true"
+                data-pol-id="ywkyy4"
+                data-pol-file-name="news-widget-v2"
+                data-pol-file-type="component"
+                data-pol-location-start="136:14"
+                data-pol-location-end="136:48"
+              >
+                <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+                <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+                <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+              </svg>
+              <span>Tiles</span>
+            </button>
+            <button class="view-list-btn" data-button-name="list">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-list h-4 w-4"
+                aria-hidden="true"
+                data-pol-id="1gzeyx"
+                data-pol-file-name="news-widget-v2"
+                data-pol-file-type="component"
+                data-pol-location-start="148:14"
+                data-pol-location-end="148:42"
+              >
+                <path d="M3 12h.01"></path>
+                <path d="M3 18h.01"></path>
+                <path d="M3 6h.01"></path>
+                <path d="M8 12h13"></path>
+                <path d="M8 18h13"></path>
+                <path d="M8 6h13"></path>
+              </svg>
+              <span>List</span>
+            </button>
+          </div>
+          <div class="filter-btn-wrap">
+            <button class="filter-dropdown-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-funnel h-4 w-4"
+                aria-hidden="true"
+                data-pol-id="5dsw05"
+                data-pol-file-name="sponsors-toolbar"
+                data-pol-file-type="component"
+                data-pol-location-start="101:12"
+                data-pol-location-end="101:46"
+              >
+                <path
+                  d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+                ></path>
+              </svg>
+              <span>Filters</span>
+            </button>
+            <div class="filter-dropdown-panel" style="display: none">
+              <div class="filter-dropdown-header">
+                <h3 class="filter-dropdown-header-title">Filters</h3>
+                <button class="clear-all-btn">Clear all</button>
+              </div>
+
+              <div class="news-categories-wrap">
+                <label for="news-categories" class="main-label"
+                  >Categories</label
+                >
+                <div class="checkbox-items-wrap">
+                  <div class="checkbox-item" data-state="unchecked">
+                    <button class="checkbox-item-button" data-button-name="bar">
+                      <span>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4"
+                          style=""
+                        >
+                          <path
+                            d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                    <label class="checkbox-item-label" for="bar"
+                      >Category 1</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-wrap">
+          <!-- Search Wrap  -->
+          <div class="search-bar-outer-wrap">
+            <div class="search-wrap search-input-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="search-svg-color lucide lucide-search absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400 w-3.5 h-3.5"
+                aria-hidden="true"
+                data-pol-id="f5msu0"
+                data-pol-file-name="news-filters"
+                data-pol-file-type="component"
+                data-pol-location-start="54:8"
+                data-pol-location-end="54:113"
+              >
+                <path d="m21 21-4.34-4.34"></path>
+                <circle cx="11" cy="11" r="8"></circle>
+              </svg>
+              <input
+                type="text"
+                placeholder="Search by name or category..."
+                class="search-border-color search-input search-input-text-color"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Sponsors Wrap - List View -->
+      <div class="list-container">
+        <div class="main-sponsors-wrap-list">
+          <div class="single-list-wrap">
+            <div class="list-category-header-wrap">
+              <h2 class="list-category-name">
+                Category Name <span class="list-sponsors-count">10</span>
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-5 w-5 text-foreground transition-transform rotate-180"
+                aria-hidden="true"
+                data-pol-id="pgchwg"
+                data-pol-file-name="collapsible-category-header"
+                data-pol-file-type="component"
+                data-pol-location-start="33:6"
+                data-pol-location-end="37:8"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="sponsor-list">
+              <div class="single-sponsor-item">
+                <div class="img-outer-wrap flex-shrink-0 w-28 md:w-40">
+                  <div class="img-wrap h-20 md:h-20">
+                    <img src="https://picsum.photos/seed/albertheijn/200/100" />
+                  </div>
+                </div>
+                <div class="details-wrap flex-1 min-w-0">
+                  <h3 class="sponsor-name">Albert Heijn <sp</h3>
+                  <div class="category-label">Category Name</div>
+                  <div class="sponsor-desc visibility-hidden md-block">
+                    Belangrijkste financiële partner die alle clubactiviteiten
+                    en jeugdontwikkelingsprogramma's ondersteunt.
+                  </div>
+                  <div class="btn-wrap">
+                    <a
+                      class="btn-primary visit-site-btn card-button-text card-button-bg"
+                      href="https://www.abnamro.nl"
+                      target="_blank"
+                      >Bezoek website
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-external-link ml-2 h-4 w-4"
+                        aria-hidden="true"
+                      >
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14 21 3"></path>
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <a
+                    class="btn-primary visit-site-btn card-button-text card-button-bg"
+                    href="https://www.abnamro.nl"
+                    target="_blank"
+                    >Bezoek website
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-external-link ml-2 h-4 w-4"
+                      aria-hidden="true"
+                    >
+                      <path d="M15 3h6v6"></path>
+                      <path d="M10 14 21 3"></path>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Sponsors Wrap - Tiles View -->
+      <div class="tiles-container">
+        <div class="main-sponsors-wrap-tiles">
+          <div class="single-sponsors-wrap">
+            <div class="category-header-wrap">
+              <h2 class="category-name">
+                Head Sponsor <span class="sponsors-count">10</span>
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-5 w-5 text-foreground transition-transform rotate-180"
+                aria-hidden="true"
+                data-pol-id="pgchwg"
+                data-pol-file-name="collapsible-category-header"
+                data-pol-file-type="component"
+                data-pol-location-start="33:6"
+                data-pol-location-end="37:8"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div
+              class="sponsor-cards-grid sponsors-grid sponsors-grid-cols-1 sponsors-sm-grid-cols-2 sponsors-lg-grid-cols-3"
+            >
+              <div class="single-sponsor-card shadow">
+                <div class="top-line top-line-color"></div>
+                <div class="content-wrap">
+                  <div class="top-wrap">
+                    <div class="logo-wrap">
+                      <img
+                        src="https://fastly.picsum.photos/id/1021/200/100.jpg?hmac=CAD0DKJKI5nTtwTyrSPpHwiEyZMA-AzKXmeoE-2kHCU"
+                        alt="logo"
+                      />
+                    </div>
+                  </div>
+                  <div class="bottom-wrap">
+                    <div class="category-label">Category Name</div>
+                    <h3 class="sponsor-name">Nike</h3>
+                    <div class="sponsor-since-wrap">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-calendar mr-1 h-3 lg:h-4 w-3 lg:w-4"
+                        aria-hidden="true"
+                        data-pol-id="gntj95"
+                        data-pol-file-name="sponsor-card"
+                        data-pol-file-type="component"
+                        data-pol-location-start="53:12"
+                        data-pol-location-end="53:67"
+                      >
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                      </svg>
+                      <span class="sponsor-since-text">Sponsor since 2006</span>
+                    </div>
+                    <div class="sponsor-desc">
+                      Technology partner providing lighting solutions for our
+                      fields.
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <a
+                    href="https://www.nike.com"
+                    class="btn-primary visit-site-btn"
+                  >
+                    Bezoek website
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-external-link ml-2 h-4 w-4"
+                      aria-hidden="true"
+                      data-pol-id="8xz0df"
+                      data-pol-file-name="sponsor-card"
+                      data-pol-file-type="component"
+                      data-pol-location-start="63:12"
+                      data-pol-location-end="63:57"
+                    >
+                      <path d="M15 3h6v6"></path>
+                      <path d="M10 14 21 3"></path>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- No Results Template  -->
+      <div id="no-results-template" class="no-results-template">
+        <div class="no-results-wrap">
+          <h3 class="no-results-heading">No sponsors found</h3>
+          <p class="no-results-description">
+            There are no sponsors that match your selected filters or search
+            query.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="main.js" type="module"></script> -->
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
