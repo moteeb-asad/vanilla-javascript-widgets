@@ -6,7 +6,7 @@ A comprehensive, interactive News widget built with vanilla JavaScript. This wid
 
 ### Active News
 
-![Active News](screenshots/active-news.png)
+![Active News](screenshots/active-newss.png)
 
 ### Archived News
 
