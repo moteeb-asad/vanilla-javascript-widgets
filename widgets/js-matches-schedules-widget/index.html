@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+    <title>Matches Schedules Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="upcoming-matches-wrap umw">
+      <div class="container">
+        <div class="row">
+          <!-- Filter  -->
+          <div class="col-12 filter-wrap">
+            <div class="d-flex flex-wrap align-items-center pb-3 team-title">
+              <div
+                class="team-filters main-filters-wrap ml-auto d-flex align-items-center"
+              >
+                <div class="team-filters">
+                  <button
+                    class="btn btn-secondary dropdown-toggle filter-btn-bg-color filters-text-styling"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      width="24"
+                      height="24"
+                      class="filter"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M487.9 0H24.1C3.9 0-6.4 25.9 8.5 40.8L192 224.2V416c0 5.9 2.6 11.5 7.1 15.3l96 80c10.5 8.8 26.9 1.1 26.9-12.4V224.2L503.5 40.8C518.4 25.9 508.1 0 487.9 0z"
+                      />
+                    </svg>
+                    Filters
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                      width="24"
+                      height="24"
+                      class="down"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M31.1 192h257.8c17.8 0 26.7 21.5 14.1 34.1l-128.9 129c-7.8 7.8-20.5 7.8-28.3 0l-128.9-129C4.4 213.5 13.3 192 31.1 192z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="dropdown-menu shadow dropdown-menu-right p-4">
+                    <div class="row">
+                      <!-- Category Checkboxes  -->
+                      <div
+                        class="col-12 col-sm mb-3 category-checkboxes single-checkbox"
+                      >
+                        <h6 class="main-label">Category</h6>
+                      </div>
+                      <!-- Teams Checkboxes  -->
+                      <div
+                        class="col-12 col-sm mb-3 gender-team-checkboxes single-checkbox"
+                      >
+                        <h6 class="main-label">Teams</h6>
+                      </div>
+                      <!-- Location  -->
+                      <div
+                        class="col-12 col-sm mb-3 location-checkboxes single-checkbox"
+                      >
+                        <h6 class="main-label">Location</h6>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="location-checkbox-1"
+                            value="Away"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="location-checkbox-1"
+                            >Away</label
+                          >
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="location-checkbox-2"
+                            value="Home"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="location-checkbox-2"
+                            >Home</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row btns">
+                      <div class="col-12 text-right inner-wrap pt-3">
+                        <a href="#" class="btn reset-btn-link text-muted px-4"
+                          >Reset Filters</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-primary px-4 apply-filters-btn"
+                          >Apply</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Date -->
+                <select
+                  class="custom-select date-selector mr-2 filters-text-styling"
+                ></select>
+                <!-- Sort -->
+                <select
+                  class="custom-select sort-selector filters-text-styling"
+                >
+                  <option value="0">Sort by:</option>
+                  <option value="1">Time ascending</option>
+                  <option value="2">Time descending</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Filter End  -->
+
+          <!-- Matches Loader  -->
+          <div class="upcoming-matches-loader">
+            <div class="spinner"></div>
+            <div class="loader-text">Loading...</div>
+          </div>
+          <!-- Matches Loader End  -->
+
+          <!-- Accordion -->
+          <div class="col-12 mb-4 custom-table">
+            <div class="list-group matches-container">
+              <div class="single-item">
+                <!-- Accordion Panel  -->
+                <a
+                  class="list-group-item list-group-item-action accordion-panel collapsed"
+                  data-accordion-id="1"
+                  data-toggle="collapse"
+                  role="button"
+                >
+                  <div class="match-info px-8">
+                    <div class="col col-left">
+                      <span
+                        class="club order-3 team-name home-team team-one-name"
+                        >Team A</span
+                      >
+                      <img src="" height="30" class="home-team-img" alt="" />
+                    </div>
+                    <div class="col-2 col-middle timescore">
+                      <strong class="main-time"></strong>
+                      <small class="play-field test"></small>
+                      <span class="badge badge-warning"></span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        class="infoicon-svg"
+                        width="11"
+                      >
+                        <path
+                          fill="#495057"
+                          d="M256 8C119 8 8 119.1 8 256c0 137 111 248 248 248s248-111 248-248C504 119.1 393 8 256 8zm0 110c23.2 0 42 18.8 42 42s-18.8 42-42 42-42-18.8-42-42 18.8-42 42-42zm56 254c0 6.6-5.4 12-12 12h-88c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h12v-64h-12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h64c6.6 0 12 5.4 12 12v100h12c6.6 0 12 5.4 12 12v24z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="col col-right">
+                      <img src="" height="30" class="away-team-img" alt="" />
+                      <span
+                        class="club order-3 team-name away-team team-two-name"
+                        >Team B</span
+                      >
+                    </div>
+                    <span class="arrows-wrap">
+                      <img
+                        src="https://irp-cdn.multiscreensite.com/236dd999/dms3rep/multi/up-arrow.png"
+                        class="arrow-up toggle-icon"
+                      />
+                    </span>
+                  </div>
+                </a>
+                <!-- Accordion Content  -->
+                <div
+                  class="accordion-content accordion-collapse"
+                  data-accordion-content-id="1"
+                >
+                  <div class="match-table-info">
+                    <div class="row inner-row">
+                      <div class="col-12 col-sm-5 col-left">
+                        <div class="inner-wrap">
+                          <img class="home-team-club-logo" src="" />
+                          <h6 class="home-team-club-name match-loc-contct-info">
+                            Kampong
+                          </h6>
+                          <div class="home-team-address match-loc-contct-info">
+                            <span class="street"></span
+                            ><span class="house-number"></span><br />
+                            <span class="zipcode"></span
+                            ><span class="city"></span>
+                          </div>
+                          <br />
+                          <div class="home-team-contact match-loc-contct-info">
+                            <span class="phone"></span><br />
+                            <span class="email"></span><br />
+                            <span class="web-page"></span>
+                          </div>
+                          <br />
+                          <div class="map-direction">
+                            <a
+                              href=""
+                              target="_blank"
+                              class="map-direction-link"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                                class="directionSvgIcon map-direction-icon"
+                              >
+                                <path
+                                  d="M502.6 233.3L278.7 9.4c-12.5-12.5-32.8-12.5-45.4 0L9.4 233.3c-12.5 12.5-12.5 32.8 0 45.4l223.9 223.9c12.5 12.5 32.8 12.5 45.4 0l223.9-223.9c12.5-12.5 12.5-32.8 0-45.4zm-101 12.6l-84.2 77.7c-5.1 4.7-13.4 1.1-13.4-5.9V264h-96v64c0 4.4-3.6 8-8 8h-32c-4.4 0-8-3.6-8-8v-80c0-17.7 14.3-32 32-32h112v-53.7c0-7 8.3-10.6 13.4-5.9l84.2 77.7c3.4 3.2 3.4 8.6 0 11.8z"
+                                />
+                              </svg>
+                              View Route
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-sm-7 pt-3 pt-sm-0 ml-15 col-right">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link one active active-tab-text-style active-tab-bg-color active-tab-border-color"
+                              id="pills-tab-1"
+                              >Match Information</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link two inactive-tab-text-style inactive-tab-bg-color inactive-tab-border-color"
+                              id="pills-tab-2"
+                              >Standings</a
+                            >
+                          </li>
+                        </ul>
+                        <div class="nav-pills-content competition-information">
+                          <div class="tab-pane one active" id="pills-content-1">
+                            <div class="row py-2 main-row">
+                              <div
+                                class="col-12 px-08 label match-details-label"
+                              >
+                                Opponent
+                              </div>
+                              <div
+                                class="col-12 px-08 value opponent match-details-value"
+                              ></div>
+                            </div>
+                            <div class="row main-row">
+                              <div class="col-6 col-md px-md-08">
+                                <div class="row py-2">
+                                  <div
+                                    class="col-12 label arrival-time-label match-details-label"
+                                  >
+                                    Meet Time
+                                  </div>
+                                  <div
+                                    class="col-12 value arrival-time match-details-value"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-6 col-md-8 px-md-08">
+                                <div class="row py-2">
+                                  <div class="col-12 label match-details-label">
+                                    Play Time
+                                  </div>
+                                  <div
+                                    class="col-12 value play-time match-details-value"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row py-2 main-row">
+                              <div
+                                class="col-12 px-08 label match-details-label"
+                              >
+                                Field
+                              </div>
+                              <div
+                                class="col-12 px-08 value field match-details-value"
+                              ></div>
+                            </div>
+                            <div class="row py-2 main-row">
+                              <div
+                                class="col-12 px-08 label match-details-label"
+                              >
+                                Match Number
+                              </div>
+                              <div
+                                class="col-12 px-08 value competition-number match-details-value"
+                              ></div>
+                            </div>
+                            <div class="row py-2 main-row referee-row">
+                              <div
+                                class="col-12 px-08 label match-details-label"
+                              >
+                                Referee(s)
+                              </div>
+                              <div
+                                class="col-12 px-08 value referees match-details-value"
+                              ></div>
+                            </div>
+                            <div class="row py-2 main-row">
+                              <div
+                                class="col-12 px-08 label match-details-label"
+                              >
+                                Club Note
+                              </div>
+                              <div
+                                class="col-12 px-08 value club-note match-details-value"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="tab-pane two" id="pills-content-2">
+                            <table
+                              class="table table-sm table-score table-striped"
+                            >
+                              <tbody>
+                                <tr class="template-row" style="display: none">
+                                  <th
+                                    scope="row"
+                                    class="border-top-0 text-center position stands-text-style"
+                                  ></th>
+                                  <td
+                                    class="border-top-0 team-logo stands-text-style"
+                                  >
+                                    <img
+                                      src=""
+                                      height="30"
+                                      width="30"
+                                      class="club-logo"
+                                      alt=""
+                                    />
+                                  </td>
+                                  <td
+                                    class="border-top-0 text-left club-name stands-text-style"
+                                  ></td>
+                                  <td class="border-top-0 stands-text-style">
+                                    <t>G</t>
+                                    <strong class="games-played"></strong>
+                                  </td>
+                                  <td class="border-top-0 stands-text-style">
+                                    <t>P</t>
+                                    <strong class="game-points"></strong>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion End -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

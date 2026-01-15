@@ -1,160 +1,159 @@
 # Vanilla JavaScript Widgets
 
-A collection of reusable JavaScript widgets built with **vanilla JavaScript** (no frameworks). These widgets can be integrated into any frontend website to display dynamic data by connecting to APIs or data files.
+Production-ready, self-contained widgets for sports clubs and community websites. Built with **pure vanilla JavaScript** (ES6+) - no frameworks, no dependencies.
 
-## 🎯 Overview
+## 🎯 What's Included
 
-This repository contains self-contained, production-ready JavaScript widgets that:
+A collection of **5 reusable widgets** that integrate seamlessly into any website:
 
-- **Work on any frontend**: Easily integrate into any website or web application
-- **Connect to data sources**: Fetch data from REST APIs or use local data files
-- **Pure JavaScript**: Built with vanilla JavaScript (ES6+) - no dependencies required
-- **Responsive & Accessible**: Mobile-friendly designs with dark mode support
-- **Easy to customize**: Well-structured code that's simple to modify and extend
+### 📰 **News Widget**
 
-## 📦 Widgets
+Display club news and announcements with active/archived filtering, search, and category organization. Features date-based auto-filtering and customizable featured items.
 
-### FAQ Widget (`js-faqs-widget`)
+### ❓ **FAQ Widget**
 
-An interactive FAQ widget with dual view modes, search, filtering, and modal popups.
+Comprehensive FAQ display with dual view modes (list & cards), category filtering, advanced search, and file attachment support. Perfect for handling customer questions.
 
-**Features:**
+### 🏑 **Cancelled Matches Carousel**
 
-- Dual view modes (List & Cards)
-- Real-time search functionality
-- Category and attachment filtering
-- Expandable accordions
-- Modal popups for detailed views
-- Responsive design
-- Dark mode support
+Beautiful carousel displaying cancelled matches with smooth scrolling navigation, date filtering, and match details. Includes dark mode support.
 
-**Data Source:** Connects to API or uses `dummyData.js` file
+### 🎖️ **Hockey Matches Schedule Widget**
 
-**Files:**
+Interactive widget for displaying and managing hockey match schedules with advanced filtering by category, teams, and location. Features date navigation, detailed match information with standings, and responsive accordion-based display.
 
-- `main.js` - Core functionality (1,157 lines)
-- `index.html` - HTML structure
-- `style.css` - Responsive styling (1,254 lines)
-- `dummyData.js` - Sample data structure
+### 🤝 **Sponsors Widget**
 
-### Cancelled Matches Carousel Widget (`js-cancelled-matches-carousel-widget`)
+Elegant sponsor directory with dual view modes (tiles & list), category filtering, search capabilities, and website links. Automatically organized and sorted.
 
-A carousel widget for displaying cancelled sports matches with date filtering.
+## ✨ Key Features
 
-**Features:**
+- ✅ **Zero Dependencies** - Pure JavaScript (ES6+ modules)
+- ✅ **Responsive Design** - Works perfectly on desktop and mobile
+- ✅ **Dark Mode Support** - Built-in light/dark theme compatibility
+- ✅ **Flexible Data** - Connect to APIs or use local JSON data
+- ✅ **Highly Configurable** - Easy-to-customize settings for each widget
+- ✅ **Search & Filter** - Real-time search and advanced filtering options
+- ✅ **Production Ready** - Clean, well-documented, tested code
 
-- Smooth carousel navigation
-- Date-based filtering
-- Match details display (teams, times, locations, reasons)
-- Responsive design
-- Dark mode support
+## 🚀 Quick Start
 
-**Data Source:** Connects to API or uses `dummyData.js` file
+Each widget is self-contained and requires just 3 files:
 
-**Files:**
+```
+widget-name/
+├── index.html      # HTML structure
+├── main.js         # Logic & functionality
+├── style.css       # Responsive styling
+└── dummyData.js    # Configuration & data
+```
 
-- `main.js` - Core functionality (1,159 lines)
-- `index.html` - HTML structure
-- `style.css` - Styling with dark mode (471 lines)
-- `dummyData.js` - Configuration and sample data
+### Setup (30 seconds)
 
-## 🛠️ Technologies Used
+1. Copy widget folder to your project
+2. Update `dummyData.js` with your data/API endpoint
+3. Include in your HTML:
 
-- **Vanilla JavaScript** (ES6+)
-- **HTML5**
-- **CSS3** (Grid, Flexbox, Custom Properties)
-- **No frameworks or libraries** (pure JavaScript)
+```html
+<link rel="stylesheet" href="widget/style.css" />
+<script type="module" src="widget/main.js"></script>
+```
+
+### Test Locally
+
+```bash
+cd widgets/js-news-widget
+python -m http.server 8000
+# Visit http://localhost:8000
+```
 
 ## 📁 Project Structure
 
 ```
 vanilla-javascript-widgets/
 ├── widgets/
-│   ├── js-faqs-widget/
-│   │   ├── index.html
-│   │   ├── main.js
-│   │   ├── style.css
-│   │   ├── dummyData.js
-│   │   ├── screenshots/
-│   │   └── README.md
-│   ├── js-cancelled-matches-carousel-widget/
-│   │   ├── index.html
-│   │   ├── main.js
-│   │   ├── style.css
-│   │   ├── dummyData.js
-│   │   ├── screenshots/
-│   │   └── README.md
-│   └── [more widgets...]
+│   ├── js-news-widget/                    # Club news & announcements
+│   ├── js-faqs-widget/                    # Frequently asked questions
+│   ├── js-cancelled-matches-carousel-widget/  # Match cancellations
+│   ├── js-matches-schedules-widget/       # Hockey match schedules
+│   └── js-sponsors-widget/                # Sponsor directory
 └── README.md
 ```
 
-## 🚀 Getting Started
+## 🔧 Configuration
 
-Each widget is self-contained and can be integrated into any website:
-
-1. **Copy the widget files** to your project
-2. **Configure data source**: Update `dummyData.js` with your API endpoint or data
-3. **Include in your HTML**: Add the CSS and JavaScript files to your page
-4. **Customize**: Modify styles and configuration as needed
-
-### Running Locally
-
-For testing, you can run each widget independently:
-
-```bash
-# Navigate to widget folder
-cd widgets/js-faqs-widget
-
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve
-```
-
-## 💡 Data Integration
-
-Widgets can connect to data in two ways:
-
-1. **API Integration**: Configure the API endpoint and authentication token in `dummyData.js`
-2. **Local Data File**: Use the `dummyData.js` file to provide static data
-
-Example API configuration:
+Each widget uses a centralized `dummyData.js` for configuration:
 
 ```javascript
-config: {
-  api_url: "https://api.example.com/data",
-  api_token: "your-api-token"
-}
+export const data = {
+  config: {
+    // Display settings
+    hide_widget_title: false,
+    hide_categories: false,
+    show_search_bar: true,
+
+    // Pagination
+    total_news_limit: 7,
+
+    // Connect to API or use local data
+    api_url: "https://api.example.com/data",
+    api_token: "your-token",
+  },
+  device: "desktop",
+};
 ```
 
-## 🛠️ Technologies Used
+## 💻 Technologies
 
 - **Vanilla JavaScript** (ES6+ modules)
 - **HTML5**
 - **CSS3** (Grid, Flexbox, Custom Properties)
-- **No frameworks or libraries** - pure JavaScript
+- **No frameworks** - Just pure JavaScript
+
+## 📊 Browser Support
+
+- ✓ Chrome/Edge (Latest)
+- ✓ Firefox (Latest)
+- ✓ Safari (Latest)
+- ✓ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📖 Documentation
+
+Each widget includes detailed documentation:
+
+- [News Widget](widgets/js-news-widget/README.md)
+- [FAQ Widget](widgets/js-faqs-widget/README.md)
+- [Cancelled Matches Widget](widgets/js-cancelled-matches-carousel-widget/README.md)
+- [Hockey Matches Schedule Widget](widgets/js-matches-schedules-widget/README.md)
+- [Sponsors Widget](widgets/js-sponsors-widget/README.md)
+
+## 🎨 Customization
+
+All widgets support:
+
+- ✨ Custom color schemes (CSS variables)
+- 🔧 Hide/show UI components
+- 📱 Mobile-specific configurations
+- 🌓 Light & dark mode
+- 🔍 Search & filter options
+- 📊 Pagination settings
 
 ## 📝 Code Quality
 
-- Clear function naming and organization
-- Commented code sections
-- Consistent code style
-- Error handling and validation
-- Responsive and accessible design
+- Clear, well-organized code
+- Comprehensive inline comments
+- Error handling & validation
+- Accessibility best practices
+- Responsive design patterns
 
 ## 📄 License
 
-This project is for portfolio/educational purposes.
+Portfolio/Educational project
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues) if you want to contribute.
+Found an issue or have a feature request? Open an issue on GitHub!
 
-## 📧 Contact
+## ⭐ Like This Project?
 
-For questions or suggestions, please open an issue or contact the repository maintainer.
-
-## ⭐ Show Your Support
-
-If you find this project helpful, please consider giving it a star ⭐!
+Give it a star! It helps others discover these widgets.

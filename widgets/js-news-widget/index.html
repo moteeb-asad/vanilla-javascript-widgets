@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Widget</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- News Loader -->
+    <div class="news-loader" style="display: none">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading...</div>
+    </div>
+    <!-- News Widget Wrap -->
+    <div
+      class="widget-border-color news-widget-wrap custom-container"
+      data-show-widget-outer-lines="true"
+    >
+      <!-- Headiings Wrap -->
+      <div class="headings-wrap">
+        <div class="inner-wrap">
+          <div class="col-left">
+            <h2 class="main-heading main-heading-styling">Latest News</h2>
+            <div class="desc-wrap main-description-styling">
+              Stay up to date with the latest club news and announcements
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="active-archive-wrap buttons-wrap">
+              <button
+                class="custom-btn active btn-text-styling active-btn-bg-color active-btn-border-color"
+                data-name="active"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-file-text h-4 w-4 mr-1"
+                  aria-hidden="true"
+                  data-pol-id="36ehi9"
+                  data-pol-file-name="news-widget"
+                  data-pol-file-type="component"
+                  data-pol-location-start="134:16"
+                  data-pol-location-end="134:53"
+                >
+                  <path
+                    d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                  ></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="M10 9H8"></path>
+                  <path d="M16 13H8"></path>
+                  <path d="M16 17H8"></path>
+                </svg>
+                Active News
+              </button>
+              <button
+                class="custom-btn btn-text-styling normal-btn-bg-color normal-btn-border-color"
+                data-name="archived"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-archive h-4 w-4 mr-1"
+                  aria-hidden="true"
+                  data-pol-id="tvupcz"
+                  data-pol-file-name="news-widget"
+                  data-pol-file-type="component"
+                  data-pol-location-start="147:16"
+                  data-pol-location-end="147:52"
+                >
+                  <rect width="20" height="5" x="2" y="3" rx="1"></rect>
+                  <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"></path>
+                  <path d="M10 12h4"></path>
+                </svg>
+                Archive News
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Search Wrap  -->
+      <div class="search-bar-outer-wrap">
+        <div class="search-wrap search-input-wrap">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="search-input-svg-color lucide lucide-search absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400 w-3.5 h-3.5"
+            aria-hidden="true"
+            data-pol-id="f5msu0"
+            data-pol-file-name="news-filters"
+            data-pol-file-type="component"
+            data-pol-location-start="54:8"
+            data-pol-location-end="54:113"
+          >
+            <path d="m21 21-4.34-4.34"></path>
+            <circle cx="11" cy="11" r="8"></circle>
+          </svg>
+          <input
+            type="text"
+            placeholder="Zoek binnen de nieuws artikelen..."
+            class="search-border-lines search-input search-input-text-color"
+          />
+        </div>
+      </div>
+      <!-- Categories Wrap  -->
+      <div class="categories-buttons-wrap">
+        <div class="categories-buttons-inner-wrap">
+          <button
+            class="category-btn active category-btn-text-styling category-active-btn-bg-color category-active-btn-border-color"
+            data-name="all"
+          >
+            All
+          </button>
+          <button
+            class="category-btn category-btn-text-styling category-normal-btn-bg-color category-normal-btn-border-color"
+            data-name="news"
+          >
+            News
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Categories Dropdown  -->
+      <div class="categories-dropdown-wrap">
+        <button class="categories-dropdown-btn">
+          <div class="inner-wrap">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-funnel h-4 w-4"
+              aria-hidden="true"
+              data-pol-id="heioid"
+              data-pol-file-name="document-filter"
+              data-pol-file-type="component"
+              data-pol-location-start="239:16"
+              data-pol-location-end="239:50"
+            >
+              <path
+                d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+              ></path>
+            </svg>
+            <span>All</span>
+          </div>
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 opacity-50"
+            aria-hidden="true"
+          >
+            <path
+              d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="categories-dropdown-items-wrap" style="display: none">
+          <div class="single-dropdown-item" data-category="Category 1">
+            Category 1
+          </div>
+        </div>
+      </div>
+      <!-- No Results Element (hidden by default) -->
+      <div id="no-results-template" style="display: none">
+        <div class="no-results-wrap">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <h3 class="no-results-heading"></h3>
+          <p class="no-results-description"></p>
+        </div>
+      </div>
+      <!-- News Grid Wrap  -->
+      <div class="news-grid-wrap grid grid-cols-2 lg:grid-cols-3 grid-cols-1">
+        <a href="#" class="news-grid-item-link featured">
+          <div class="news-grid-item">
+            <div class="img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1280&h=720&fit=crop&crop=center"
+                alt="News Image"
+              />
+            </div>
+            <div class="content-wrap">
+              <div class="category-date-wrap">
+                <div class="category-wrap">Jeugd</div>
+                <div class="date-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-calendar h-3 w-3 mr-1"
+                    aria-hidden="true"
+                    data-pol-id="chjf1c"
+                    data-pol-file-name="news-widget"
+                    data-pol-file-type="component"
+                    data-pol-location-start="407:12"
+                    data-pol-location-end="407:49"
+                  >
+                    <path d="M8 2v4"></path>
+                    <path d="M16 2v4"></path>
+                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                    <path d="M3 10h18"></path>
+                  </svg>
+                  <span class="date-text">13 jan</span>
+                </div>
+              </div>
+              <h3 class="title-wrap">Jeugdteam Wint Regionaal Kampioenschap</h3>
+              <div class="desc-wrap">
+                Sluit je aan bij een spannende community cup wedstrijd met
+                lokale teams. Poorten openen om 13:00 met aftrap gepland om
+                14:00 in het hoofdstadion.
+              </div>
+              <div class="read-more-wrap">
+                Read more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform"
+                  aria-hidden="true"
+                  data-pol-id="eofb9z"
+                  data-pol-file-name="news-widget"
+                  data-pol-file-type="component"
+                  data-pol-location-start="429:10"
+                  data-pol-location-end="429:96"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Load More Wrap  -->
+      <div class="view-all-news">
+        <button
+          class="view-all-news-btn view-all-button-text-styling view-all-bg-color view-all-border-color"
+        >
+          <span>View all news (01) </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-right h-4 w-4"
+            aria-hidden="true"
+            data-pol-id="6fza2x"
+            data-pol-file-name="news-widget"
+            data-pol-file-type="component"
+            data-pol-location-start="354:18"
+            data-pol-location-end="354:52"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="no-news-text-wrap">
+        <div class="active-text inner-text">
+          There are currently no active news items.
+        </div>
+        <div class="archived-text inner-text">
+          There are currently no archived news items.
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
