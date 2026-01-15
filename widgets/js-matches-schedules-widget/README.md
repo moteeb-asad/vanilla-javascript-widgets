@@ -6,6 +6,12 @@ A comprehensive, interactive widget for displaying and managing hockey match sch
 
 The Hockey Matches Schedule Widget is a vanilla JavaScript-based component designed to provide users with an intuitive interface to browse, filter, and view detailed information about upcoming hockey matches. Built with modern web standards and Bootstrap styling, it offers seamless user experience across all devices.
 
+## 📸 Screenshots
+
+![Hockey Matches Schedule Widget](assets/screenshots/js-matches-schedules-widget.png)
+
+_The widget displaying match schedule with filtering options, date navigation, and accordion match details._
+
 ## Features
 
 ### 📅 **Date Navigation**
